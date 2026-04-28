@@ -312,27 +312,9 @@
 </div>
 <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 <script type="module">
-  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-  createChat({
-    webhookUrl: 'https://yousuf48017.app.n8n.cloud/webhook/a766cb08-a9e1-40ce-abe0-acb88fae4b80/chat',
-    target: '#n8n-chat-container',
-    mode: 'window',
-    showWelcomeScreen: true,
-    defaultLanguage: 'en',
-    initialMessages: [
-      'Hi! I am your Business Analyst AI Assistant.',
-      'Ask me to write BRDs, FRDs, user stories, UAT test cases, or anything BA related!'
-    ],
-    i18n: {
-      en: {
-        title: 'BA AI Assistant',
-        subtitle: 'Your Business Analysis Co-pilot',
-        inputPlaceholder: 'Ask me anything about business analysis...',
-        getStarted: 'Start Chatting',
-        footer: ''
-      }
-    }
-  });
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'YOUR_PRODUCTION_WEBHOOK_URL'
+	});
 </script>
-</body>
-</html>
