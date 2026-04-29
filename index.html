@@ -225,7 +225,7 @@ What would you like help with today?</div>
 </div>
  
 <script>
-  var WEBHOOK = 'https://yousuf48017.app.n8n.cloud/webhook/a766cb08-a9e1-40ce-abe0-acb88fae4b80/chat';
+  var WEBHOOK = 'https://yousuf48017.app.n8n.cloud/webhook/c101d6ca-100b-4c69-b14e-d43027d168c6/chat';
   var chatMessages = document.getElementById('chatMessages');
   var chatInput = document.getElementById('chatInput');
   var chatSend = document.getElementById('chatSend');
@@ -263,9 +263,9 @@ What would you like help with today?</div>
     })
     .then(function(res) { return res.json(); })
     .then(function(data) {
-      var reply = data.output || data.text || data.message || data.response || 'Received your message!';
+      var reply = data.reply || data.output || data.text || data.message || 'Received your message!';
       if (Array.isArray(data) && data[0]) {
-        reply = data[0].output || data[0].text || data[0].message || reply;
+        reply = data[0].reply || data[0].output || data[0].text || reply;
       }
       typing.textContent = reply;
       typing.classList.remove('typing');
@@ -286,4 +286,3 @@ What would you like help with today?</div>
 </script>
 </body>
 </html>
- 
